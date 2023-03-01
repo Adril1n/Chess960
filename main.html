@@ -15,8 +15,8 @@
 
 		function make_arr(pie_arr, shpo_arr){
 			let new_arr = [];
-			for (let i = 0; i < pie_arr.length; i++){
-				j = shpo_arr[i];
+			for (let i = 0; i < shpo_arr.length; i++){
+				let j = shpo_arr[i];
 				new_arr.push(pie_arr[j]);
 			}
 			return new_arr.join(" | ");
@@ -28,12 +28,12 @@
 			const shuffle_pos_arr = shuffle(pos_arr);
 			const final_arr = make_arr(piece_arr, shuffle_pos_arr)
 
-			document.getElementById("test").innerHTML = final_arr;
+			document.getElementById("setup_txt").innerHTML = final_arr;
 		}
 	</script>
 </head>
 <body>
-	<h1 id="test">R | N | B | Q | K | B | N | R</h1>
+	<h1 id="setup_txt">R | N | B | Q | K | B | N | R</h1>
 	<button type="button" style="height: 100px;width: 150px;" onclick="generateBoard()">Generate New Set-up</button>
 </body>
 </html>
