@@ -25,15 +25,20 @@
 		function generateBoard() {
 			const piece_arr = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'];
 			const pos_arr = [0, 1, 2, 3, 4, 5, 6, 7];
-			const shuffle_pos_arr = shuffle(pos_arr);
-			const final_arr = make_arr(piece_arr, shuffle_pos_arr)
+			
+			const shuffle_pos_arr_1 = shuffle(pos_arr);
+			const final_arr_1 = make_arr(piece_arr, shuffle_pos_arr_1);
+			const shuffle_pos_arr_2 = shuffle(pos_arr);
+			const final_arr_2 = make_arr(piece_arr, shuffle_pos_arr_2);
 
-			document.getElementById("setup_txt").innerHTML = final_arr;
+			document.getElementById("setup1_txt").innerHTML = final_arr_1;
+			document.getElementById("setup2_txt").innerHTML = final_arr_2;
 		}
 	</script>
 </head>
 <body>
-	<h1 id="setup_txt">R | N | B | Q | K | B | N | R</h1>
+	<h1 id="setup1_txt">R | N | B | Q | K | B | N | R</h1>
+	<h1 id="setup2_txt">R | N | B | Q | K | B | N | R</h1>
 	<button type="button" style="height: 100px;width: 150px;" onclick="generateBoard()">Generate New Set-up</button>
 </body>
 </html>
